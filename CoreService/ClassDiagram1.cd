@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SPA.Cmd">
+    <Position X="9" Y="4.25" Width="1.5" />
+    <Members>
+      <Field Name="cmd_file" Hidden="true" />
+      <Field Name="cmd_params" Hidden="true" />
+      <Field Name="errorMsg" Hidden="true" />
+      <Method Name="ExecuteShellCommand" Hidden="true" />
+      <Field Name="outputMsg" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAEABIAAgAAAgAAAAAAAAAAAAAAAAQAAAAAASAAA=</HashCode>
+      <FileName>SPA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPA.VirtualGateway">
+    <Position X="13.5" Y="4.25" Width="1.5" />
+    <Members>
+      <Field Name="pas" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAADAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>SPA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPA.Sniffing">
+    <Position X="15.75" Y="4.25" Width="1.5" />
+    <Members>
+      <Field Name="pas" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAADAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>SPA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPA.UserDefined">
+    <Position X="11.25" Y="4.25" Width="1.5" />
+    <Members>
+      <Field Name="pas" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAADAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>SPA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceSDK.ServiceBase">
+    <Position X="13.5" Y="1" Width="1.5" />
+    <Members>
+      <Property Name="ServicePath" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SPA.Logging">
+    <Position X="18" Y="4.25" Width="1.5" />
+    <Members>
+      <Field Name="pas" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAADAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>SPA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ServiceSDK.IService">
+    <Position X="11.25" Y="1" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9.27" />
+</ClassDiagram>

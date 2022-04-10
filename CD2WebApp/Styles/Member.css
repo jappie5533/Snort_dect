@@ -1,0 +1,28 @@
+﻿body 
+{
+    background: #b6b7bc;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+#leftframe
+{
+    width: 160px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+#rightframe
+{
+    width: 760px;
+    float: right;
+    padding: 0 5px;
+}
+
+#leftframe a
+{
+    width: 150px;
+}

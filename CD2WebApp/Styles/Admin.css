@@ -1,0 +1,44 @@
+﻿body 
+{
+    background: #b6b7bc;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+#leftframe
+{
+    width: 160px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+#rightframe
+{
+    width: 800px;
+    float: right;
+    padding: 0 5px;
+    margin: 0 0 10px 0;
+}
+
+#leftframe a
+{
+    width: 150px;
+}
+
+#peerconnectiondiagram
+{
+    height: 600px;
+    width: 600px;
+    background-color: 1a1a1a;
+    float:left
+}
+
+#inner-details
+{
+    min-height: 20px;
+    float: left;
+    margin-left: 15px;
+}

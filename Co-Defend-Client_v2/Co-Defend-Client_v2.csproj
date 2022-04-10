@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F5CA8C1-44AD-4F80-B1E8-55CE666D21F4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Co_Defend_Client_v2</RootNamespace>
+    <AssemblyName>Co-Defend-Client_v2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PcapDotNet.Base, Version=0.10.0.20588, Culture=neutral, PublicKeyToken=4b6f3e583145a652, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CommonTool\third-partDLL\PcapDotNet\PcapDotNet.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="PcapDotNet.Core, Version=0.10.0.20632, Culture=neutral, PublicKeyToken=4b6f3e583145a652, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CommonTool\third-partDLL\PcapDotNet\PcapDotNet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PcapDotNet.Core.Extensions">
+      <HintPath>..\CommonTool\third-partDLL\PcapDotNet\PcapDotNet.Core.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="PcapDotNet.Packets, Version=0.10.0.20603, Culture=neutral, PublicKeyToken=4b6f3e583145a652, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CommonTool\third-partDLL\PcapDotNet\PcapDotNet.Packets.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.79.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CommonTool\third-partDLL\SQLite\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Visualization">
+      <HintPath>..\CommonTool\third-partDLL\Visualization\Visualization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agent\AgentController.cs" />
+    <Compile Include="Agent\AgentLoader.cs" />
+    <Compile Include="Agent\IAgentEvent.cs" />
+    <Compile Include="Agent\PAA.cs" />
+    <Compile Include="Agent\RAA.cs" />
+    <Compile Include="Agent\SPA.cs" />
+    <Compile Include="Agent\SPA.InnerClass.cs" />
+    <Compile Include="UI\AnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AnalysisForm.Designer.cs">
+      <DependentUpon>AnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ComparativeAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ComparativeAnalysisForm.Designer.cs">
+      <DependentUpon>ComparativeAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Componet\About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Componet\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AgentMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AgentMainForm.Designer.cs">
+      <DependentUpon>AgentMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Componet\AnalysisChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Componet\AnalysisChart.Designer.cs">
+      <DependentUpon>AnalysisChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Componet\AnalyticalAppUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Componet\AnalyticalAppUserControl.Designer.cs">
+      <DependentUpon>AnalyticalAppUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Componet\Command.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Componet\Command.Designer.cs">
+      <DependentUpon>Command.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Componet\DownloadService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Componet\DownloadService.Designer.cs">
+      <DependentUpon>DownloadService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FileDebugForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FileDebugForm.Designer.cs">
+      <DependentUpon>FileDebugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Componet\HubListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Componet\HubListView.Designer.cs">
+      <DependentUpon>HubListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Componet\Messenger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Componet\Messenger.Designer.cs">
+      <DependentUpon>Messenger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Componet\PublishService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Componet\PublishService.Designer.cs">
+      <DependentUpon>PublishService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Componet\ServicePlugin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Componet\ServicePlugin.Designer.cs">
+      <DependentUpon>ServicePlugin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Componet\Statistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Componet\Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Componet\BuiltinApps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Componet\UserControl1.Designer.cs">
+      <DependentUpon>BuiltinApps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Componet\SnortAnalyze.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Componet\SnortAnalyze.Designer.cs">
+      <DependentUpon>SnortAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SnortAnalsischart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SnortAnalsischart.Designer.cs">
+      <DependentUpon>SnortAnalsischart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\AgentAnalysisUtility.cs" />
+    <Compile Include="Web References\SnortService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\AnalysisForm.resx">
+      <DependentUpon>AnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ComparativeAnalysisForm.resx">
+      <DependentUpon>ComparativeAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Componet\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AgentMainForm.resx">
+      <DependentUpon>AgentMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Componet\AnalysisChart.resx">
+      <DependentUpon>AnalysisChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Componet\AnalyticalAppUserControl.resx">
+      <DependentUpon>AnalyticalAppUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Componet\BuiltinApps.resx">
+      <DependentUpon>BuiltinApps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Componet\Command.resx">
+      <DependentUpon>Command.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Componet\DownloadService.resx">
+      <DependentUpon>DownloadService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Componet\SnortAnalyze.resx">
+      <DependentUpon>SnortAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FileDebugForm.resx">
+      <DependentUpon>FileDebugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Componet\HubListView.resx">
+      <DependentUpon>HubListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Componet\Messenger.resx">
+      <DependentUpon>Messenger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Componet\PublishService.resx">
+      <DependentUpon>PublishService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Componet\ServicePlugin.resx">
+      <DependentUpon>ServicePlugin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Componet\Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Agent\SPA.Events.cs" />
+    <EmbeddedResource Include="UI\SnortAnalsischart.resx">
+      <DependentUpon>SnortAnalsischart.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\SnortService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SnortService\SnortAnalyze.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agent\Agent.csproj">
+      <Project>{18AFB05C-A00D-48F1-8713-F1B3F9E7C380}</Project>
+      <Name>Agent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonTool\CommonTool.csproj">
+      <Project>{6644CF3C-7D0B-44E7-A6AE-627820E51488}</Project>
+      <Name>CommonTool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CoreService\CoreService.csproj">
+      <Project>{A4E4B4B4-51E0-4098-8D8A-455064973E94}</Project>
+      <Name>CoreService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hub\Hub.csproj">
+      <Project>{CB9073AB-B70C-4CA2-B222-D946239D0364}</Project>
+      <Name>Hub</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lidgren.Network\Lidgren.Network.csproj">
+      <Project>{49BA1C69-6104-41AC-A5D8-B54FA9F696E8}</Project>
+      <Name>Lidgren.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceSDK\ServiceSDK.csproj">
+      <Project>{0154AEA0-69B3-414D-B1B8-0EF481885340}</Project>
+      <Name>ServiceSDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceUserDefined\ServiceUserDefined.csproj">
+      <Project>{F8DB053D-63E7-41F4-BEAF-26C0AA7A7D08}</Project>
+      <Name>ServiceUserDefined</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\plus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\hub.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\statistics.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\utility.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\about.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\minus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\CD_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://140.126.130.50/SnortAnalyze.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SnortService\</RelPath>
+      <UpdateFromURL>http://140.126.130.50/SnortAnalyze.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Co_Defend_Client_v2_SnortService_SnortAnalyze</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\SnortService\SnortAnalyze.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://E502A_LAB.org/SnortAnalyze" xmlns:s1="http://E502A_LAB.org/SnortAnalyze/AbstractTypes" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://E502A_LAB.org/SnortAnalyze" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://E502A_LAB.org/SnortAnalyze">
+      <s:element name="Analyze">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fs" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnalyzeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnalyzeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFileLen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFileLenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DownloadFileLenResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnalysisResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnalysisResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnalysisResultResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="int" type="s:int" />
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+    </s:schema>
+    <s:schema targetNamespace="http://E502A_LAB.org/SnortAnalyze/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AnalyzeSoapIn">
+    <wsdl:part name="parameters" element="tns:Analyze" />
+  </wsdl:message>
+  <wsdl:message name="AnalyzeSoapOut">
+    <wsdl:part name="parameters" element="tns:AnalyzeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileLenSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadFileLen" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileLenSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadFileLenResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnalysisResultSoapIn">
+    <wsdl:part name="parameters" element="tns:AnalysisResult" />
+  </wsdl:message>
+  <wsdl:message name="AnalysisResultSoapOut">
+    <wsdl:part name="parameters" element="tns:AnalysisResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnalyzeHttpGetIn">
+    <wsdl:part name="fs" type="s1:StringArray" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnalyzeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileLenHttpGetIn">
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileLenHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AnalysisResultHttpGetIn">
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnalysisResultHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="AnalyzeHttpPostIn">
+    <wsdl:part name="fs" type="s1:StringArray" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnalyzeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileLenHttpPostIn">
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileLenHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AnalysisResultHttpPostIn">
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnalysisResultHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:portType name="SnortSoap">
+    <wsdl:operation name="Analyze">
+      <wsdl:input message="tns:AnalyzeSoapIn" />
+      <wsdl:output message="tns:AnalyzeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileLen">
+      <wsdl:input message="tns:DownloadFileLenSoapIn" />
+      <wsdl:output message="tns:DownloadFileLenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnalysisResult">
+      <wsdl:input message="tns:AnalysisResultSoapIn" />
+      <wsdl:output message="tns:AnalysisResultSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SnortHttpGet">
+    <wsdl:operation name="Analyze">
+      <wsdl:input message="tns:AnalyzeHttpGetIn" />
+      <wsdl:output message="tns:AnalyzeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileLen">
+      <wsdl:input message="tns:DownloadFileLenHttpGetIn" />
+      <wsdl:output message="tns:DownloadFileLenHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnalysisResult">
+      <wsdl:input message="tns:AnalysisResultHttpGetIn" />
+      <wsdl:output message="tns:AnalysisResultHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SnortHttpPost">
+    <wsdl:operation name="Analyze">
+      <wsdl:input message="tns:AnalyzeHttpPostIn" />
+      <wsdl:output message="tns:AnalyzeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileLen">
+      <wsdl:input message="tns:DownloadFileLenHttpPostIn" />
+      <wsdl:output message="tns:DownloadFileLenHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnalysisResult">
+      <wsdl:input message="tns:AnalysisResultHttpPostIn" />
+      <wsdl:output message="tns:AnalysisResultHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SnortSoap" type="tns:SnortSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Analyze">
+      <soap:operation soapAction="http://E502A_LAB.org/SnortAnalyze/Analyze" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileLen">
+      <soap:operation soapAction="http://E502A_LAB.org/SnortAnalyze/DownloadFileLen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnalysisResult">
+      <soap:operation soapAction="http://E502A_LAB.org/SnortAnalyze/AnalysisResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SnortSoap12" type="tns:SnortSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Analyze">
+      <soap12:operation soapAction="http://E502A_LAB.org/SnortAnalyze/Analyze" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileLen">
+      <soap12:operation soapAction="http://E502A_LAB.org/SnortAnalyze/DownloadFileLen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnalysisResult">
+      <soap12:operation soapAction="http://E502A_LAB.org/SnortAnalyze/AnalysisResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SnortHttpGet" type="tns:SnortHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Analyze">
+      <http:operation location="/Analyze" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileLen">
+      <http:operation location="/DownloadFileLen" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnalysisResult">
+      <http:operation location="/AnalysisResult" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SnortHttpPost" type="tns:SnortHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Analyze">
+      <http:operation location="/Analyze" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileLen">
+      <http:operation location="/DownloadFileLen" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnalysisResult">
+      <http:operation location="/AnalysisResult" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Snort">
+    <wsdl:port name="SnortSoap" binding="tns:SnortSoap">
+      <soap:address location="http://140.126.130.50/SnortAnalyze.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SnortSoap12" binding="tns:SnortSoap12">
+      <soap12:address location="http://140.126.130.50/SnortAnalyze.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SnortHttpGet" binding="tns:SnortHttpGet">
+      <http:address location="http://140.126.130.50/SnortAnalyze.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SnortHttpPost" binding="tns:SnortHttpPost">
+      <http:address location="http://140.126.130.50/SnortAnalyze.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

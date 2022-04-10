@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="Co_Defend_Client_v2.Agent.SPA" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAEgAAAAIAgAdAABAIIwAAAQAAggAAIAAAAEggg=</HashCode>
+      <FileName>Agent\SPA.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Agent.BaseAgent" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Co_Defend_Client_v2.Agent.AgentController" Collapsed="true">
+    <Position X="3.5" Y="4" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Public" Collapsed="true" />
+      <Compartment Name="Protected" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAEAAAgAAAAABAAAAAAAAAAAAAAAAgAQAIAAAAAAAg=</HashCode>
+      <FileName>Agent\AgentController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Agent.BaseAgentController" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Protected" Collapsed="true" />
+      <Compartment Name="Public" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+    <ShowAsCollectionAssociation>
+      <Field Name="_dicAgent" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Co_Defend_Client_v2.Agent.RAA" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAQAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Agent\RAA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Co_Defend_Client_v2.Agent.PAA" Collapsed="true">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Agent\PAA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CommonTool.Base.TaskManager" Collapsed="true">
+    <Position X="1.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CommonTool.Base.BaseAction" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Co_Defend_Client_v2.Agent.AgentLoader" Collapsed="true">
+    <Position X="1.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAEAKAAAQAAAAAAEAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Agent\AgentLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agent.BaseAgentLoader" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="CommonTool.Base.IAction" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Co_Defend_Client_v2.Agent.IAgentEvent" Collapsed="true">
+    <Position X="1.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAIAAAAAAAg=</HashCode>
+      <FileName>Agent\IAgentEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9.27" />
+</ClassDiagram>
